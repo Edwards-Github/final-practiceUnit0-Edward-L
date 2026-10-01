@@ -26,11 +26,19 @@ console.log(`Total calories today: ${totalCalories}\n`);
 // Task 4: Safeguard against invalid input
 // Module Control Structures and Logic
 const readline = require("readline-sync");
-let stringReps = readline.question(
+let numReps = readline.questionInt(
   "Enter negative number to see safeguard otherwise just enter a positive number: ",
 );
-let numReps = Number(stringReps);
 
+// Could use this to loop user until user enters valid value
+// while (numReps < 0) {
+//   console.log(`You have entered ${numReps} reps which is an invalid input.\n`);
+//   numReps = readline.questionInt(
+//     "Please enter a valid (0 or greater) value otherwise you will be prompted to enter again: ",
+//   );
+// }
+
+// Module Control Structures and Logic
 if (numReps < 0) {
   console.log(`You have entered ${numReps} reps which is an invalid input.\n`);
 } else {
